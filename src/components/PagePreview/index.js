@@ -7,15 +7,17 @@ const PagePreview = ({ __url, title, date }) => {
   return (
     <div>
       <Link to={__url}>
-        {title}
+        { title }
       </Link>
-      {pageDate &&
+      {
+        pageDate &&
         <small>
-          {' '}
+          { ' ' }
           <time key={pageDate.toISOString()}>
-            {pageDate.toDateString()}
+            { pageDate.toDateString() }
           </time>
-        </small>}
+        </small>
+      }
     </div>
   )
 }
@@ -23,7 +25,7 @@ const PagePreview = ({ __url, title, date }) => {
 PagePreview.propTypes = {
   __url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  date: PropTypes.string
+  date: PropTypes.string,
 }
 
 export default PagePreview

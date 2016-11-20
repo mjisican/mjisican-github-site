@@ -4,7 +4,7 @@ import styles from './index.css'
 
 const Content = (props) => (
   <div className={styles.content}>
-    {props.children}
+    { props.children }
   </div>
 )
 

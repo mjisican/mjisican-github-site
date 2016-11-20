@@ -10,17 +10,19 @@ const Post = (props) => {
     <Page
       {...props}
       header={<header>
-      {pageDate &&
-        <time key={pageDate.toISOString()}>
-          {pageDate.toDateString()}
-        </time>}
+        {
+          pageDate &&
+          <time key={pageDate.toISOString()}>
+            { pageDate.toDateString() }
+          </time>
+        }
       </header>}
     />
   )
 }
 
 Post.propTypes = {
-  head: PropTypes.object.isRequired
+  head: PropTypes.object.isRequired,
 }
 
 export default Post

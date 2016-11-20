@@ -1,11 +1,14 @@
 /* Using global sytles is not recommended, prefer local styles via CSS Modules */
+@import url('./assets/font-icons/style.css');
 
 /*
- * box model like it should be
+ *  box model like it should be
  *
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ *  http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  */
-html { box-sizing: border-box; }
+html {
+  box-sizing: border-box;
+}
 
 *,
 *::before,

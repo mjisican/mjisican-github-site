@@ -3,20 +3,23 @@ import Helmet from 'react-helmet'
 import invariant from 'invariant'
 import { BodyContainer, joinUri } from 'phenomic'
 
+import Loading from '../../components/Loading'
+
 import styles from './index.css'
 
 const Page = (
   {
+    isLoading,
     __filename,
     __url,
     head,
     body,
     header,
     footer,
-    children
+    children,
   },
   {
-    metadata: { pkg }
+    metadata: { pkg },
   }
 ) => {
   invariant(
@@ -31,14 +34,14 @@ const Page = (
     { property: 'og:title', content: metaTitle },
     {
       property: 'og:url',
-      content: joinUri(process.env.PHENOMIC_USER_URL, __url)
+      content: joinUri(process.env.PHENOMIC_USER_URL, __url),
     },
     { property: 'og:description', content: head.description },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:title', content: metaTitle },
     { name: 'twitter:creator', content: `@${pkg.twitter}` },
     { name: 'twitter:description', content: head.description },
-    { name: 'description', content: head.description }
+    { name: 'description', content: head.description },
   ]
 
   return (
@@ -47,28 +50,35 @@ const Page = (
         title={metaTitle}
         meta={meta}
       />
-      {head.title &&
-        <h1 className={styles.heading}>{head.title}</h1>}
-      {header}
-      <BodyContainer>{body}</BodyContainer>
-      {children}
-      {footer}
+      {
+        head.title &&
+        <h1 className={styles.heading}>{ head.title }</h1>
+      }
+      { header }
+      {
+        isLoading
+        ? <Loading />
+        : <BodyContainer>{ body }</BodyContainer>
+      }
+      { children }
+      { footer }
     </div>
   )
 }
 
 Page.propTypes = {
   children: PropTypes.node,
-  __filename: PropTypes.string.isRequired,
-  __url: PropTypes.string.isRequired,
+  isLoading: PropTypes.bool,
+  __filename: PropTypes.string,
+  __url: PropTypes.string,
   head: PropTypes.object.isRequired,
-  body: PropTypes.string.isRequired,
+  body: PropTypes.string,
   header: PropTypes.element,
-  footer: PropTypes.element
+  footer: PropTypes.element,
 }
 
 Page.contextTypes = {
-  metadata: PropTypes.object.isRequired
+  metadata: PropTypes.object.isRequired,
 }
 
 export default Page
