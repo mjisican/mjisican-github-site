@@ -1,4 +1,20 @@
 /* Using global sytles is not recommended, prefer local styles via CSS Modules */
+@import url('./assets/css/pure.css');
+@import url('./assets/css/animate.css');
+@import url('./assets/css/grids-responsive-min.css');
+@import url('./assets/css/nav.css');
+
+@font-face {
+  font-family: SaboFilled;
+  src: url('./assets/fonts/Sabo-Filled.otf');
+}
+
+@font-face {
+  font-family: RM Typerighter;
+  src:
+    url('./assets/fonts/typewriter/RM-Typerighter.ttf') format('truetype'),
+    url('./assets/fonts/typewriter/RM-Typerighter.woff') format('woff');
+}
 
 /*
  * box model like it should be
@@ -27,7 +43,7 @@ body {
  */
 html {
   min-height: 100%;
-  background: color(var(--colorPrimary) l(99%));
+  background: color(var(--colorWhite));
 }
 
 body {
