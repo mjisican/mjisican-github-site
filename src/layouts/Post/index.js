@@ -1,6 +1,9 @@
 import React, { PropTypes } from 'react'
 
+import LatestPosts from '../../components/LatestPosts'
 import Page from '../Page'
+
+import styles from './index.css'
 
 const Post = (props) => {
   // it's up to you to choose what to do with this layout ;)
@@ -9,15 +12,20 @@ const Post = (props) => {
   return (
     <Page
       {...props}
-      header={<header>
-        {
-          pageDate &&
-          <time key={pageDate.toISOString()}>
-            { pageDate.toDateString() }
-          </time>
-        }
-      </header>}
-    />
+      header={<div>
+        <header className={styles.header}>
+          {
+              pageDate &&
+              <time key={pageDate.toISOString()}>
+                { pageDate.toDateString() }
+              </time>
+            }
+        </header>
+      </div>}
+    >
+      <hr />
+      <LatestPosts />
+    </Page>
   )
 }
 

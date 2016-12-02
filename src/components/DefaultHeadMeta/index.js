@@ -6,15 +6,16 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
     <Helmet
       meta={[
         {
-          name: 'generator',
-          content: `${
+          name: 'generator', content: `${
           process.env.PHENOMIC_NAME} ${process.env.PHENOMIC_VERSION}`,
         },
         { property: 'og:site_name', content: pkg.name },
         { name: 'twitter:site', content: `@${pkg.twitter}` },
+        ...props.meta ? props.meta : [],
       ]}
       script={[
         { src: 'https://cdn.polyfill.io/v2/polyfill.min.js' },
+        ...props.scripts ? props.scripts : [],
       ]}
     />
 
@@ -27,6 +28,11 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
     <style>{ '@-ms-viewport { width: device-width; }' }</style>
   </div>
 )
+
+DefaultHeadMeta.propTypes = {
+  meta: React.PropTypes.arrayOf(React.PropTypes.object),
+  scripts: React.PropTypes.arrayOf(React.PropTypes.object),
+}
 
 DefaultHeadMeta.contextTypes = {
   metadata: PropTypes.object.isRequired,
