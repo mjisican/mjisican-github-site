@@ -1,0 +1,87 @@
+.custom-wrapper {
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 1em;
+  -webkit-font-smoothing: antialiased;
+  height: 80px;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  transition: height 0.5s;
+  position: absolute;
+  width: 100%;
+}
+
+.custom-wrapper .pure-menu-link {
+  color: #fff;
+  font-family: 'SaboFilled', cursive;
+  font-size: 14px;
+  text-shadow: 0 1px 1px black;
+}
+
+.custom-wrapper.open {
+  height: 14em;
+}
+
+.custom-menu-3 {
+  text-align: center;
+}
+
+.custom-toggle {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.custom-toggle .bar {
+  background-color: #fff;
+  display: block;
+  width: 40px;
+  height: 3px;
+  border-radius: 100px;
+  position: absolute;
+  top: 30px;
+  right: 7px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.custom-toggle .bar:first-child {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+
+.custom-toggle.x .bar {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.custom-toggle.x .bar:first-child {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 47.999em) {
+
+  .custom-menu-3 {
+    text-align: center;
+  }
+
+  .custom-toggle {
+    display: block;
+  }
+
+}
