@@ -4,6 +4,6 @@ node_modules
 
 # phenomic build
 dist
-.DS_Store
+*.DS_Store
 *.ai
 assets/img/unused

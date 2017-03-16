@@ -1,7 +1,7 @@
 ---
 title: Melvin Isican
-intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta felis non suscipit varius. Pellentesque mollis massa vitae venenatis bibendum. Nullam vestibulum nibh risus, vitae mattis metus dignissim eget. Quisque ac enim nec sapien pretium finibus. In hac habitasse platea dictumst. Quisque iaculis elementum hendrerit. Vivamus nunc odio, dictum molestie turpis vitae, viverra ullamcorper sem. Aliquam pretium arcu id eleifend tempor. Cras vel lobortis erat.
-desc1: I like to keep it simple. My goals are to focus on typography, content and conveying the message that you want to send.
+intro: Some Animations may not work on some mobile browsers. website works perfectly on chrome and safari.
+desc1: My goals is to focus on the content and conveying the message that you want to send. I am making simple designs but has the potential to attract viewers.
 desc2: I'm a developer, so I know how to create your website to run across devices using the latest technologies available.
 layout: Homepage
 # heroImage: https://farm4.staticflickr.com/3949/15589950511_3675b15e59_k.jpg

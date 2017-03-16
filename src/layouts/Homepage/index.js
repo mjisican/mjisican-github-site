@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import SpriteAnimator from 'react-sprite-animator'
+import Svg from 'react-svg-inline'
 
 // import LatestPosts from '../../components/LatestPosts'
 import Page from '../Page'
@@ -11,6 +12,7 @@ import styles from './index.css'
 import sample from '../../assets/img/iam.png'
 import sample2 from '../../assets/img/melvin-logo.png'
 import sample3 from '../../assets/img/logo-sub.png'
+import sample4 from '../../assets/img/laptop.svg'
 
 const Homepage = (props) => {
   return (
@@ -48,24 +50,27 @@ const Homepage = (props) => {
                 height={37.5}
                 direction='vertical'
                 loop={false}
-                fps={8}
+                fps={5}
               />
             </div>
           </center>
         </div>
       </div>
       <div style={{margin: 5}}>
-        <ContentBlock title='Website under construction'>
-          <p>{props.head.intro}</p>
-        </ContentBlock>
+        <ContentBlock title='What I Can Do' />
         <ContentBlock
-          title='This is a Title'
+          title='I Design'
           someText={{inLeft: props.head.desc1}}
-          someThing={<img src='http://placehold.it/150x150' alt='sfsd' />} />
+          someThing={<div className={styles.sample} />} />
         <ContentBlock
-          title='This is a Title'
-          someText={{inRight: props.head.desc2}}
-          someThing={<img src='http://placehold.it/150x150' alt='asdf' />} />
+          title='I Code'
+          someText={{inLeft: props.head.desc2}} />
+        <ContentBlock>
+          <center>
+            <Svg svg={sample4} />
+          </center>
+        </ContentBlock>
+        <ContentBlock title='Website under construction' />
       </div>
     </Page>
   )

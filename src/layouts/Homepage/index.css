@@ -4,10 +4,16 @@
   text-align: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   filter: progid:dximagetransform.microsoft.alphaimageloader(src='../../assets/img/bgMelvin.jpg', sizingMethod='scale');
   height: 100vh;
-  width: 100%;
+  min-height: 100vh;
+  -webkit-min-height: 100vh;
+  -moz-min-height: 100vh;
+  min-width: 100%;
   margin-bottom: 3em;
   display: table;
 }
@@ -20,4 +26,258 @@
   color: white;
   font-weight: 500;
   text-shadow: 0 1px 1px black;
+}
+
+.sample {
+  -webkit-animation-name: bubblinger-vert;
+    -moz-animation-name: bubblinger-vert;
+    animation-name: bubblinger-vert;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    width: 77px;
+    height: 77px;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1,0,0,1);
+    -moz-animation-duration: 20s;
+    -moz-animation-delay: 1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: cubic-bezier(1,0,0,1);
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1,0,0,1);
+    background-image: url(../../assets/img/what-i-do/design-icons-small.png);
+}
+
+.contactSection {
+  background: transparent url('../../assets/img/laptop.png') 0 0;
+  background-position: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: auto;
+  width: auto;
+}
+
+@-webkit-keyframes bubblinger {
+    0% {
+        background-position: 0 0
+    }
+    16.6% {
+        background-position: -77px 0
+    }
+    33% {
+        background-position: -77px 0
+    }
+    49% {
+        background-position: -154px 0
+    }
+    65% {
+        background-position: -154px 0
+    }
+    81% {
+        background-position: -231px 0
+    }
+    100% {
+        background-position: -231px 0
+    }
+}
+
+@-moz-keyframes bubblinger {
+    0% {
+        background-position: 0 0
+    }
+    16.6% {
+        background-position: -77px 0
+    }
+    33% {
+        background-position: -77px 0
+    }
+    49% {
+        background-position: -154px 0
+    }
+    65% {
+        background-position: -154px 0
+    }
+    81% {
+        background-position: -231px 0
+    }
+    100% {
+        background-position: -231px 0
+    }
+}
+
+@keyframes bubblinger {
+    0% {
+        background-position: 0 0
+    }
+    16.6% {
+        background-position: -77px 0
+    }
+    33% {
+        background-position: -77px 0
+    }
+    49% {
+        background-position: -154px 0
+    }
+    65% {
+        background-position: -154px 0
+    }
+    81% {
+        background-position: -231px 0
+    }
+    100% {
+        background-position: -231px 0
+    }
+}
+
+@-webkit-keyframes bubblinger-vert {
+    0% {
+        background-position: 0 0
+    }
+    5% {
+        background-position: 0 -77px
+    }
+    35% {
+        background-position: 0 -77px
+    }
+    40% {
+        background-position: 0 -154px
+    }
+    68% {
+        background-position: 0 -154px
+    }
+    73% {
+        background-position: 0 -231px
+    }
+    100% {
+        background-position: 0 -231px
+    }
+}
+
+@-moz-keyframes bubblinger-vert {
+    0% {
+        background-position: 0 0
+    }
+    5% {
+        background-position: 0 -77px
+    }
+    35% {
+        background-position: 0 -77px
+    }
+    40% {
+        background-position: 0 -154px
+    }
+    68% {
+        background-position: 0 -154px
+    }
+    73% {
+        background-position: 0 -231px
+    }
+    100% {
+        background-position: 0 -231px
+    }
+}
+
+@keyframes bubblinger-vert {
+    0% {
+        background-position: 0 0
+    }
+    5% {
+        background-position: 0 -77px
+    }
+    35% {
+        background-position: 0 -77px
+    }
+    40% {
+        background-position: 0 -154px
+    }
+    68% {
+        background-position: 0 -154px
+    }
+    73% {
+        background-position: 0 -231px
+    }
+    100% {
+        background-position: 0 -231px
+    }
+}
+
+@-webkit-keyframes bubblinger-vert-down {
+    0% {
+        background-position: 0 0
+    }
+    5% {
+        background-position: 0 77px
+    }
+    35% {
+        background-position: 0 77px
+    }
+    40% {
+        background-position: 0 154px
+    }
+    68% {
+        background-position: 0 154px
+    }
+    73% {
+        background-position: 0 231px
+    }
+    100% {
+        background-position: 0 231px
+    }
+}
+
+@-moz-keyframes bubblinger-vert-down {
+    0% {
+        background-position: 0 0
+    }
+    5% {
+        background-position: 0 77px
+    }
+    35% {
+        background-position: 0 77px
+    }
+    40% {
+        background-position: 0 154px
+    }
+    68% {
+        background-position: 0 154px
+    }
+    73% {
+        background-position: 0 231px
+    }
+    100% {
+        background-position: 0 231px
+    }
+}
+
+@keyframes bubblinger-vert-down {
+    0% {
+        background-position: 0 0
+    }
+    5% {
+        background-position: 0 77px
+    }
+    35% {
+        background-position: 0 77px
+    }
+    40% {
+        background-position: 0 154px
+    }
+    68% {
+        background-position: 0 154px
+    }
+    73% {
+        background-position: 0 231px
+    }
+    100% {
+        background-position: 0 231px
+    }
 }

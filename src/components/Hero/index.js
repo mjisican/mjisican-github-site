@@ -16,7 +16,7 @@ const Hero = ({image, title, cta}) => {
     <div
       className={styles.hero}
       style={image && {
-        background: `#111 url('${image}') 50% 50% / cover`
+        background: `#111 url('${image}') 50% 50% / cover`,
       }}
     >
       <div className={styles.header}>
